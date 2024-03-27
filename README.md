@@ -1,39 +1,38 @@
-# coolResource
+整理自己日程需要的资源网站
 
-This template should help get you started developing with Vue 3 in Vite.
 
-## Recommended IDE Setup
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Type Support for `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
+## TODO
+✅最好来个自动解析网站logo的服务,服务如下
 ```
+curl --location 'https://host/extra_site_logo?site=http://www.baidu.com' \
+'
 
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
+response
+{
+    "code": 200,
+    "msg":"",
+    "data":{
+        "logo": "https://www.baidu.com/logo.svg"
+    }
+}
 ```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
+🔄学习axios发送http请求
+🔄对接vercel的数据库
+🔄添加一个入口，可以添加资源到服务中
 ```
+curl --location 'https://host/resource/add' \
+--header 'Content-Type: application/json' \
+--data '{
+    "site":"https://www.baidu.com"
+}'
 
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
+response
+{
+    "code": 200,
+    "msg":"",
+    "data":{
+        "logo": "https://www.baidu.com/logo.svg"
+    }
+}
 ```
