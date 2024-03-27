@@ -9,15 +9,7 @@ export default {
             icon: "https://pinia.vuejs.org/logo.svg"
         },
         {
-            src: "https://nes.heheda.top/",
-            name: "红白游戏机盒",
-            desc: "在线畅玩小霸王经典游戏",
-            tab: "",
-            category: "",
-            icon: ""
-        },
-        {
-            src: "https://mklab.vercel.app/FCGames",
+            src: "https://mklab.vercel.app/FCGames/",
             name: "FC 游戏在线玩",
             desc: "FC 游戏在线玩",
             tab: "",
