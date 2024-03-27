@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import ResourceCard from './components/ResourceCard.vue';
-import reources from './reources.ts'
+import reources from './reources'
 </script>
 
 <template>
