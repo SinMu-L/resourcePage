@@ -16,5 +16,13 @@ export default {
             category: "",
             icon: ""
         },
+        {
+            src: "https://mklab.vercel.app/FCGames/",
+            name: "FC 游戏在线玩",
+            desc: "FC 游戏在线玩",
+            tab: "",
+            category: "",
+            icon: ""
+        },
     ]
 }

@@ -8,6 +8,9 @@ export default {
     extend: {
       colors: {
         main_color: "#f4f7fc"
+      },
+      boxShadow: {
+        default_boxshadow: " 0 0 10px"
       }
     },
   },
