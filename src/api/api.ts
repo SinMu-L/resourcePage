@@ -1,7 +1,8 @@
-import service from ".";
+import { service, supabase } from ".";
 
 // 卡片列表
-export function getResrouces() {
+export async function getResrouces() {
+
     return service({
         method: 'POST',
         url: '/v1/action/find',
@@ -11,6 +12,14 @@ export function getResrouces() {
             "collection": "resource",
         }
     })
+}
+
+export async function getSupabaseResrouces() {
+    const { data, error } = await supabase
+        .from('coolresource')
+        .select("*")
+
+    return data
 }
 
 
