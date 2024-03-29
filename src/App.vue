@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { onBeforeMount, ref } from "vue";
-import NavbarVue from "./components/Navbar.vue";
+import NavbarVue from "@/components/Navbar.vue";
 import {getResrouces} from '@/api/api'
 import Card from "./components/Card.vue";
 
