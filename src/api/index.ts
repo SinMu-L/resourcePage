@@ -2,7 +2,7 @@ import axios from 'axios';
 import { createClient } from '@supabase/supabase-js'
 
 const service = axios.create({
-    // baseURL: import.meta.env.VITE_MONGODB_SERVER_URL,
+    baseURL: import.meta.env.VITE_MONGODB_SERVER_URL,
     headers: {
         'Content-Type': 'application/json',
         'api-key': import.meta.env.VITE_MONGODB_SERVER_API_KEY
