@@ -12,5 +12,15 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
+  },
+  server:{
+    proxy:{
+      '/v1': {
+        target: 'https://ap-southeast-1.aws.data.mongodb-api.com/app/data-vshbe/endpoint/data',
+        changeOrigin: true,
+        // rewrite: (path) => path.replace(/^\/v1/, ''),
+      },
+    }
   }
+  
 })

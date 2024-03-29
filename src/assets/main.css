@@ -5,7 +5,10 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
 #app{
   /* background: #f4f7fc; */
   height: 100vh;
+  /* background-color: #f4f7fc; */
 }

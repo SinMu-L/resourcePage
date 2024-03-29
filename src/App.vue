@@ -1,18 +1,23 @@
 <script setup lang="ts">
-import ResourceCard from './components/ResourceCard.vue';
-import reources from './reources'
+import { onBeforeMount, ref } from "vue";
+import NavbarVue from "./components/Navbar.vue";
+import {getResrouces} from '@/api/api'
+import Card from "./components/Card.vue";
+
+
+var resources = ref()
+
+onBeforeMount(async ()=>{
+    resources.value = await getResrouces()
+})
+
 </script>
 
 <template>
-  <div class="flex flex-row h-full">
-    <div class=" w-1/12 bg-blue-400 hidden">1</div>
-    <div class="h-full w-full p-4 bg-main_color ">
-      <div class="flex flex-wrap justify-start  gap-4  ">
-        <ResourceCard class="" v-for="(item,index) in reources.data" :key="index" :name="item['name']" :src="item['src']" :desc="item['desc']" :icon="item['icon']"></ResourceCard>
-      </div>
-      
+  <NavbarVue></NavbarVue>
+  
+  <div class="grid grid-cols-2 m-1 md:grid-cols-6">
+      <Card v-for="(resource,index) in resources.data.documents" :key="index" :name="resource.name" :src="resource.src" :icon="resource.icon" :desc="resource.desc"></Card>
 
-    </div>
   </div>
-
-</template>./reources
+</template>
